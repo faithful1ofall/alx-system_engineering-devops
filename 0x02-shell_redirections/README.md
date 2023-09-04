@@ -1,26 +1,170 @@
-# Shell, I/O Redirections and filters
+# Shell, I/O Redirections and Filters
 
-This repository contains a collection of shell scripts that perform various tasks using Bash scripting. Each script is designed to solve a specific problem or task.
+This repository contains a collection of shell scripts that demonstrate various concepts related to shell scripting, I/O redirections, and filters in Unix-based systems.
 
-## Task List
+## Task 0: [0-hello_world](./0-hello_world)
+A simple script that prints a message.
 
-1. [01-count_directories](task_scripts/01-count_directories) - Counts the number of directories in the current directory.
-2. [02-list_files](task_scripts/02-list_files) - Lists files in the current directory.
-3. [03-print_line_numbers](task_scripts/03-print_line_numbers) - Prints line numbers for a given file.
-4. [04-print_line](task_scripts/04-print_line) - Prints a specific line from a file.
-5. [05-unique_words](task_scripts/05-unique_words) - Finds unique words in a text file.
-6. [06-replace_characters](task_scripts/06-replace_characters) - Replaces characters in a file.
-7. [07-delete_lines](task_scripts/07-delete_lines) - Deletes specific lines from a file.
-8. [08-count_word_occurrences](task_scripts/08-count_word_occurrences) - Counts word occurrences in a file.
-9. [09-grep_and_sort](task_scripts/09-grep_and_sort) - Uses `grep` and `sort` to filter and sort lines.
-10. [10-count_directory_sizes](task_scripts/10-count_directory_sizes) - Counts directory sizes.
-11. [11-concatenate_files](task_scripts/11-concatenate_files) - Concatenates multiple files into one.
-12. [12-search_and_replace](task_scripts/12-search_and_replace) - Searches and replaces text in a file.
-13. [13-remove_empty_lines](task_scripts/13-remove_empty_lines) - Removes empty lines from a file.
-14. [14-reverse_lines](task_scripts/14-reverse_lines) - Reverses lines in a file.
-15. [15-delete_lines](task_scripts/15-delete_lines) - Deletes lines containing specific text.
-16. [16-count_lines](task_scripts/16-count_lines) - Counts lines in a file.
-17. [17-count_directories_recursively](task_scripts/17-count_directories_recursively) - Counts directories and subdirectories recursively.
-18. [18-empty_files_and_directories](task_scripts/18-empty_files_and_directories) - Lists empty files and directories.
-19. [19-acrostic_decoder](task_scripts/19-acrostic_decoder) - Decodes acrostics.
-20. [20-list_gif_files](task_scripts/20-list_gif_files) - Lists .gif files.
+## Task 1: [1-confused_smiley](./1-confused_smiley)
+A script that displays a smiley face.
+
+## Task 2: [2-hellofile](./2-hellofile)
+A script that displays the contents of a file.
+
+## Task 3: [3-twofiles](./3-twofiles)
+A script that combines the contents of two files.
+
+## Task 4: [4-lastlines](./4-lastlines)
+A script that shows the last part of a file.
+
+## Task 5: [5-firstlines](./5-firstlines)
+A script that displays the beginning of a file.
+
+## Task 6: [6-third_line](./6-third_line)
+A script that extracts a specific line from a file.
+
+## Task 7: [7-file](./7-file)
+A script that searches for a word in a file.
+
+## Task 8: [8-cwd_state](./8-cwd_state)
+A script that prints and saves the current working directory.
+
+## Task 9: [9-duplicate_last_line](./9-duplicate_last_line)
+A script that duplicates the last line of a file.
+
+## Task 10: [10-no_more_js](./10-no_more_js)
+A script that deletes specific files.
+
+## Task 11: [11-directories](./11-directories)
+A script that counts directories and subdirectories.
+
+## Task 12: [12-newest_files](./12-newest_files)
+A script that displays the newest files in a directory.
+
+## Task 13: [13-unique](./13-unique)
+A script that takes input and only outputs unique lines.
+
+## Task 14: [14-findthatword](./14-findthatword)
+A script that searches for a word in files.
+
+## Task 15: [15-countthatword](./15-countthatword)
+A script that counts the occurrences of a word in files.
+
+## Task 16: [16-whatsnext](./16-whatsnext)
+A script that displays lines containing specific patterns.
+
+## Task 17: [17-hidethisword](./17-hidethisword)
+A script that replaces specific words in files.
+
+## Task 18: [18-letteronly](./18-letteronly)
+A script that removes specific characters from a file.
+
+## Task 19: [19-AZ](./19-AZ)
+A script that replaces specific characters in a file.
+
+## Task 20: [20-hiago](./20-hiago)
+A script that matches specific patterns in files.
+
+## Task 21: [21-reverse](./21-reverse)
+A script that reverses the content of a file.
+
+## Task 22: [22-users_and_homes](./22-users_and_homes)
+A script that displays user information.
+
+## Task 23: [23-count_words](./# 0x02. Shell, I/O Redirections and Filters
+
+This repository contains a collection of shell scripts that demonstrate various concepts related to shell scripting, I/O redirections, and filters in Unix-based systems.
+
+## Task 0: [0-hello_world](./0-hello_world)
+A simple script that prints a message.
+
+## Task 1: [1-confused_smiley](./1-confused_smiley)
+A script that displays a smiley face.
+
+## Task 2: [2-hellofile](./2-hellofile)
+A script that displays the contents of a file.
+
+## Task 3: [3-twofiles](./3-twofiles)
+A script that combines the contents of two files.
+
+## Task 4: [4-lastlines](./4-lastlines)
+A script that shows the last part of a file.
+
+## Task 5: [5-firstlines](./5-firstlines)
+A script that displays the beginning of a file.
+
+## Task 6: [6-third_line](./6-third_line)
+A script that extracts a specific line from a file.
+
+## Task 7: [7-file](./7-file)
+A script that searches for a word in a file.
+
+## Task 8: [8-cwd_state](./8-cwd_state)
+A script that prints and saves the current working directory.
+
+## Task 9: [9-duplicate_last_line](./9-duplicate_last_line)
+A script that duplicates the last line of a file.
+
+## Task 10: [10-no_more_js](./10-no_more_js)
+A script that deletes specific files.
+
+## Task 11: [11-directories](./11-directories)
+A script that counts directories and subdirectories.
+
+## Task 12: [12-newest_files](./12-newest_files)
+A script that displays the newest files in a directory.
+
+## Task 13: [13-unique](./13-unique)
+A script that takes input and only outputs unique lines.
+
+## Task 14: [14-findthatword](./14-findthatword)
+A script that searches for a word in files.
+
+## Task 15: [15-countthatword](./15-countthatword)
+A script that counts the occurrences of a word in files.
+
+## Task 16: [16-whatsnext](./16-whatsnext)
+A script that displays lines containing specific patterns.
+
+## Task 17: [17-hidethisword](./17-hidethisword)
+A script that replaces specific words in files.
+
+## Task 18: [18-letteronly](./18-letteronly)
+A script that removes specific characters from a file.
+
+## Task 19: [19-AZ](./19-AZ)
+A script that replaces specific characters in a file.
+
+## Task 20: [20-hiago](./20-hiago)
+A script that matches specific patterns in files.
+
+## Task 21: [21-reverse](./21-reverse)
+A script that reverses the content of a file.
+
+## Task 22: [22-users_and_homes](./22-users_and_homes)
+A script that displays user information.
+
+## Task 23: [23-count_words](./23-count_words)
+A script that counts words in a text file.
+
+## Task 24: [24-lets_parse_apache_logs](./24-lets_parse_apache_logs)
+A script that parses Apache log files.
+
+## Task 25: [25-honeypot](./25-honeypot)
+A script that sets up a honeypot.
+
+## Task 26: [26-squish](./26-squish)
+A script that compresses files into a .tar.gz archive.
+
+)
+A script that counts words in a text file.
+
+## Task 24: [24-lets_parse_apache_logs](./24-lets_parse_apache_logs)
+A script that parses Apache log files.
+
+## Task 25: [25-honeypot](./25-honeypot)
+A script that sets up a honeypot.
+
+## Task 26: [26-squish](./26-squish)
+A script that compresses files into a .tar.gz archive.
+
