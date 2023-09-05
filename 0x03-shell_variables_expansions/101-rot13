@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ -z $ROT13 ]]; then 
+export ROT13=true 
+tr 'A-Za-z' 'N-ZA-Mn-za-m' 
+else 
+unset ROT13 
+tr 'N-ZA-Mn-za-m' 'A-Za-z' 
+fi
