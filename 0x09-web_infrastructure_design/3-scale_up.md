@@ -1,6 +1,6 @@
 # Scaled Up Web Infrastructure
 
-![Image of a scaled up web infrastructure](3-scale_up.png)
+![Image of a scaled up web infrastructure](https://imgur.com/MjVpa0O)
 
 
 
