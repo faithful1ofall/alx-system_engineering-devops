@@ -1,10 +1,9 @@
-#!/bin/bash
-
-# Install Nginx if not already installed
-if ! [ -x "$(command -v nginx)" ]; then
-  sudo apt-get update
-  sudo apt-get install -y nginx
-fi
+#!/usr/bin/env bash
+# Install Nginx and the init file have only a message
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install nginx -y
+sudo service nginx start
 
 # Configure redirection
 sudo sed -i 's/location \/ {/location \/ {\n        location \/redirect_me {\n            return 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n        }/g' /etc/nginx/sites-available/default
