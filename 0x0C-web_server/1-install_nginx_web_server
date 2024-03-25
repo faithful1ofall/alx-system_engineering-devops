@@ -1,32 +1,30 @@
 #!/usr/bin/env bash
-# Configures a new ubuntu machine by installing
-# Nginx where it should be listening on port 80
-# Serve a page that would return a Hello World string
-#
-
-echo -e "Updating and installing Nginx.\n"
-sudo apt-get update -y -qq && \
-	 sudo apt-get install nginx -y
-
-echo -e "\nSetting up some minor stuff.\n"
-
-# starting nginx service
-sudo service nginx start
-
-# allowing nginx on firewall
+# Installs, configures, and starts the server
+sudo apt-get update
+sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
+mkdir -p /var/www/html
+chmod -R 755 /var/www
+echo 'Hello World!' > /var/www/html/index.html
+SERVER_CONFIG=\
+"server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
 
-# Give the user ownership to website files for easy editing
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
+	root /var/www/html;
+	index index.html index.htm index.nginx-debian.html;
 
-# Backup default index
-cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+	server_name _;
 
-# Creating new index
-echo -e "Hello World!                  " | dd status=none of=/var/www/html/index.nginx-debian.html
+	location / {
+		try_files \$uri \$uri/ =404;
+	}
+}"
 
-# Restarting nginx
-sudo service nginx restart
+bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
 
-echo -e "\nCompleted. ✅\n"
+if [ "$(pgrep -c nginx)" -le 0 ]; then
+	sudo service nginx start
+else
+	sudo service nginx restart
+fi
