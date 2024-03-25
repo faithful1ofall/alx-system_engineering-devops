@@ -2,7 +2,6 @@
 # Install Nginx, redirect and 404
 
 sudo apt update -y
-sudo apt upgrade -y
 sudo apt install nginx -y
 
 sudo sed -i "s/^\t\}$/\t\}\n\n\terror_page 404 \/404.html;/" /etc/nginx/sites-available/default
