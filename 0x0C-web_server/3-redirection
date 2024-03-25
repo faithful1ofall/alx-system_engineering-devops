@@ -6,7 +6,7 @@ sudo apt install nginx -y
 sudo service nginx start
 
 # Configure redirection
-sudo sed -i 's/location \/ {/location \/ {\n        location \/redirect_me {\n            return 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n        }/g' /etc/nginx/sites-available/default
+sudo sed -i 's/location \/ {/location \/ {\n        location \/redirect_me {\n            rewrite ^\/redirect_me https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;\n        }/g' /etc/nginx/sites-available/default
 
 # Reload Nginx to apply changes
 sudo service reload nginx
