@@ -29,5 +29,9 @@ location / {
 }" > /etc/nginx/sites-available/default
 
 service nginx reload
+service nginx restart
+
+systemctl nginx reload
+systemctl nginx restart
 
 echo "Ceci n'est pas une page   " > /usr/share/nginx/html/404.html;
