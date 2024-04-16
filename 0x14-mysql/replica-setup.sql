@@ -1,0 +1,8 @@
+CHANGE MASTER TO
+MASTER_HOST = '34.229.161.131',
+MASTER_USER = 'replica_user',
+MASTER_PASSWORD = 'your_password',
+MASTER_LOG_FILE = 'mysql-bin.000001',
+MASTER_LOG_POS = 154;
+START slave;
+
