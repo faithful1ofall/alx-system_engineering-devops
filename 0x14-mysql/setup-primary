@@ -1,3 +1,4 @@
 sudo ufw allow 3306
 sudo ufw reload
 sudo cp 4-mysql_configuration_primary /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo service mysql restart
